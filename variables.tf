@@ -23,5 +23,7 @@ output "instance_id" {
 output "Public_ip" {
     value = aws_instance.atlas.*.public_ip
    }
-
-
+resources "aws_dynamodb_table" {
+  engine = "myengine"
+  keys = "mykey"
+     }
